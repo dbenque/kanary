@@ -15,6 +15,7 @@ var (
 	cleanupTimeout       = time.Second * 5
 )
 
+// InitKanaryOperator used to initialise the KanaryOperator for test purposes
 func InitKanaryOperator(t *testing.T) (*framework.Framework, *framework.TestCtx, error) {
 	ctx := framework.NewTestCtx(t)
 	err := ctx.InitializeClusterResources(&framework.CleanupOptions{TestContext: ctx, Timeout: cleanupTimeout, RetryInterval: cleanupRetryInterval})
